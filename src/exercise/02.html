@@ -17,21 +17,39 @@
     // ReactDOM.render(element, rootElement)
 
     // extra credit #1
+    // const rootElement = document.getElementById('root')
+
+    // const span1 = React.createElement('span', {
+    //   children: 'Hello',
+    //   key: 'span1',
+    // })
+    // const span2 = React.createElement('span', {
+    //   children: 'World',
+    //   key: 'span2',
+    // })
+
+    // const element = React.createElement('div', {
+    //   children: [span1, span2],
+    //   className: 'container',
+    // })
+
+    // ReactDOM.render(element, rootElement)
+
+    // extra credit #1 - alternative solution
     const rootElement = document.getElementById('root')
 
-    const span1 = React.createElement('span', {
-      children: 'Hello',
-      key: 'span1',
-    })
-    const span2 = React.createElement('span', {
-      children: 'World',
-      key: 'span2',
-    })
+    const span1 = React.createElement('span', {}, 'Hello')
+    const span2 = React.createElement('span', {}, 'World')
 
-    const element = React.createElement('div', {
-      children: [span1, span2],
-      className: 'container',
-    })
+    const element = React.createElement(
+      'div',
+      {
+        className: 'container',
+      },
+      span1,
+      ' ',
+      span2,
+    )
 
     ReactDOM.render(element, rootElement)
   </script>
